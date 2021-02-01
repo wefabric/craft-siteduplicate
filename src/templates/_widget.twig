@@ -46,6 +46,7 @@
 
 {% js %}
 	$('#siteduplicate-duplicateButton').click(function(){
+		$(this).trigger('siteduplicate:duplicate');
 		$('input[name=action]').val('siteduplicate/duplicate');
 		$('#main-form').append('<input type="hidden" name="duplicateSiteId" value="'+$('#siteduplicate-siteId').val()+'"/>').val();
 		$('#main-form').submit();
